@@ -18,7 +18,7 @@ input:focus,select:focus,textarea:focus{border-color:#2A6348!important;box-shado
 ::-webkit-scrollbar-thumb{background:#D0CAC2;border-radius:4px}
 
 /* ══════════════════════════════════
-   RTL SUPPORT (NEW)
+   RTL SUPPORT
 ══════════════════════════════════ */
 [dir="rtl"] { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
 [dir="rtl"] #sidebar { border-right: none; border-left: 1px solid #E4DED6; }
@@ -78,7 +78,7 @@ input:focus,select:focus,textarea:focus{border-color:#2A6348!important;box-shado
    APP LAYOUT — DESKTOP SIDEBAR
 ══════════════════════════════════ */
 #app-screen{
-  display:none;          /* shown by JS */
+  display:none;
   height:100vh;
   flex-direction:column;
   overflow:hidden;
@@ -198,7 +198,7 @@ input:focus,select:focus,textarea:focus{border-color:#2A6348!important;box-shado
 #sync-bar.show{display:block}
 #sync-bar.warn{background:#FEF6E4;border-color:#e8c97a;color:#B07D10}
 
-/* Mobile: sidebar drawer replaces bottom nav */
+/* Mobile: sidebar drawer */
 #bnav{display:none!important}
 @media(max-width:768px){
   #sidebar{
@@ -230,7 +230,6 @@ input:focus,select:focus,textarea:focus{border-color:#2A6348!important;box-shado
 .card{background:#fff;border:1px solid #DDD8CE;border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:0 1px 8px rgba(26,24,20,.04)}
 .card-hd{font-size:10px;font-weight:700;color:#78746A;text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px}
 
-/* Stats grid */
 .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
 .stat-row-4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
 .sbox{background:#EDEBE5;border-radius:9px;padding:14px 12px;text-align:center}
@@ -238,7 +237,6 @@ input:focus,select:focus,textarea:focus{border-color:#2A6348!important;box-shado
 .sbox .l{font-size:9px;color:#78746A;margin-top:3px;line-height:1.3}
 .c-green{color:#2A6348}.c-orange{color:#C4672F}.c-red{color:#B83025}.c-blue{color:#2563EB}.c-muted{color:#1A1814}
 
-/* Tags */
 .tag{display:inline-flex;align-items:center;padding:2px 9px;border-radius:20px;font-size:10px;font-weight:700}
 .tag-green{background:#E4F2EB;color:#2A6348}
 .tag-orange{background:#FCEEE4;color:#C4672F}
@@ -248,7 +246,6 @@ input:focus,select:focus,textarea:focus{border-color:#2A6348!important;box-shado
 .tag-blue{background:#EFF6FF;color:#2563EB}
 .tag-purple{background:#F5F3FF;color:#6D28D9}
 
-/* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 16px;font-size:13px;font-weight:600;border-radius:8px;transition:all .15s;border:none}
 .btn:active{transform:scale(.97)}
 .btn-p{background:#2A6348;color:#fff}.btn-p:hover{background:#225539}
@@ -259,7 +256,6 @@ input:focus,select:focus,textarea:focus{border-color:#2A6348!important;box-shado
 .btn-full{width:100%}
 .btn-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 
-/* Forms */
 .fg{margin-bottom:13px}
 .fl{display:block;font-size:11px;font-weight:600;color:#78746A;margin-bottom:5px}
 .fc{width:100%;padding:9px 11px;border:1.5px solid #DDD8CE;border-radius:8px;font-size:12px;background:#fff;color:#1A1814;transition:border-color .15s}
@@ -270,30 +266,26 @@ input:focus,select:focus,textarea:focus{border-color:#2A6348!important;box-shado
 select.fc{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2378746A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px}
 textarea.fc{resize:none}
 
-/* Alerts */
 .alert{border-radius:7px;padding:9px 12px;margin-bottom:7px;font-size:11px;line-height:1.5;display:flex;gap:8px}
 .alert-red{background:#FBEAE8;border-left:3px solid #B83025;color:#B83025}
 .alert-yellow{background:#FEF6E4;border-left:3px solid #B07D10;color:#B07D10}
 .alert-green{background:#E4F2EB;border-left:3px solid #2A6348;color:#2A6348}
 .alert-blue{background:#EFF6FF;border-left:3px solid #2563EB;color:#2563EB}
 
-/* List items */
 .li{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid #DFD9D0}
 .li-l{display:flex;align-items:center;gap:9px;min-width:0}
 .li-ic{width:34px;height:34px;border-radius:8px;background:#EDEBE5;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
 .li-title{font-size:12px;font-weight:600}
 .li-sub{font-size:10px;color:#78746A;margin-top:1px}
 
-/* Bar chart */
 .barchart{display:flex;align-items:flex-end;gap:5px;height:70px;margin:8px 0 4px}
 .bc-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px}
 .bc-bar{width:100%;border-radius:3px 3px 0 0;transition:height .4s;cursor:default}
 .bc-bar:hover{opacity:1!important}
 .bc-lbl{font-size:8px;color:#78746A;font-family:monospace}
 
-/* Steps */
 .steps{display:flex;align-items:center;margin-bottom:20px}
-.step-dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:font-size:11px;font-weight:700;flex-shrink:0;transition:all .2s}
+.step-dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;transition:all .2s}
 .step-dot.done{background:#2A6348;color:#fff}
 .step-dot.active{background:#2A6348;color:#fff;box-shadow:0 0 0 4px #E4F2EB}
 .step-dot.pending{background:#DFD9D0;color:#78746A}
@@ -301,29 +293,24 @@ textarea.fc{resize:none}
 .step-line.done{background:#2A6348}
 .step-line.pending{background:#DFD9D0}
 
-/* Toggle switch */
 .sw{width:38px;height:21px;border-radius:11px;position:relative;cursor:pointer;transition:background .2s;flex-shrink:0;border:none}
 .sw-thumb{width:17px;height:17px;background:#fff;border-radius:50%;position:absolute;top:2px;transition:left .2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
 
-/* Table */
 .dt{width:100%;border-collapse:collapse;font-size:11px}
 .dt th{text-align:left;padding:8px 10px;background:#EDEBE5;color:#78746A;font-weight:700;font-size:10px;cursor:pointer;user-select:none;white-space:nowrap}
 .dt th:hover{background:#DFD9D0}
 .dt td{padding:9px 10px;border-bottom:1px solid #DFD9D0}
 .dt tr:hover td{background:#F7F5F0}
 
-/* Modals */
 .overlay{display:none;position:fixed;inset:0;background:rgba(26,24,20,.5);z-index:300;align-items:flex-end;justify-content:center}
 .overlay.show{display:flex}
 .modal{background:#fff;border-radius:18px 18px 0 0;padding:24px 20px 36px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;animation:slideUp .25s ease}
 .modal-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
 .modal-close{width:28px;height:28px;border-radius:50%;background:#EDEBE5;font-size:14px;color:#78746A;cursor:pointer;border:none}
 
-/* Toast */
 #toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1A1814;color:#fff;padding:9px 18px;border-radius:22px;font-size:12px;font-weight:600;z-index:999;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .25s;box-shadow:0 4px 20px rgba(0,0,0,.25)}
 #toast.show{opacity:1}
 
-/* Notification panel */
 .notif-panel{position:fixed;top:56px;right:12px;width:300px;background:#fff;border:1px solid #DDD8CE;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:250;display:none;max-height:70vh;overflow-y:auto}
 .notif-panel.show{display:block}
 .np-hd{padding:12px 16px;font-size:12px;font-weight:700;border-bottom:1px solid #F0EDE8;display:flex;justify-content:space-between}
@@ -333,17 +320,14 @@ textarea.fc{resize:none}
 .np-text{font-size:11px;line-height:1.5}
 .np-time{font-size:10px;color:#78746A;margin-top:2px}
 
-/* Live dot */
 .live-dot{width:6px;height:6px;background:#2A6348;border-radius:50%;display:inline-block;margin-right:4px;animation:pulse 2s infinite}
 
-/* Desktop 2-column dashboard grid */
 @media(min-width:900px){
   .dash-grid{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start}
   .dash-main{min-width:0}
   .dash-side{min-width:0}
 }
 
-/* Grid helpers */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -364,11 +348,8 @@ textarea.fc{resize:none}
 </div>
 
 
-<!-- ══════════════════════════════════
-     AUTH SCREENS
-══════════════════════════════════ -->
 <!-- ══ FIRST-TIME SETUP ══ -->
-<div id="setup-screen" class="auth-screen" >
+<div id="setup-screen" class="auth-screen">
   <div class="auth-box">
     <div class="auth-logo">
       <div class="auth-logo-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M20 3H4v10c0 3.3 2.7 6 6 6h4c3.3 0 6-2.7 6-6V3zm-2 10c0 2.2-1.8 4-4 4h-4c-2.2 0-4-1.8-4-4V5h12v8z"/><path d="M12 19v2M8 21h8"/></svg></div>
@@ -405,7 +386,7 @@ textarea.fc{resize:none}
       <div class="fg"><label class="fl">Admin Email <span style="color:#B83025">*</span></label>
         <input class="fc" id="s-admin-email" type="email" placeholder="admin@hospital.sa"></div>
       <div class="fg"><label class="fl">Password <span style="color:#B83025">*</span></label>
-        <div class="pw-wrap"><input class="fc" id="s-admin-pw" type="password" placeholder="Min. 8 characters" oninput="checkStrength(this.value,'s-strength')">
+        <div class="pw-wrap"><input class="fc" id="s-admin-pw" type="password" placeholder="Min. 8 characters" oninput="checkStrength(this.value,'s')">
         <span class="pw-eye" onclick="togglePw('s-admin-pw',this)">👁</span></div>
         <div style="display:flex;gap:4px;margin-top:5px" id="s-strength-bars">
           <div style="flex:1;height:3px;border-radius:2px;background:#DFD9D0" id="sb1"></div>
@@ -444,7 +425,7 @@ textarea.fc{resize:none}
 </div>
 
 <!-- ══ LOGIN ══ -->
-<div id="login-screen" class="auth-screen" >
+<div id="login-screen" class="auth-screen">
   <div class="auth-box">
     <div class="auth-logo">
       <div class="auth-logo-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M20 3H4v10c0 3.3 2.7 6 6 6h4c3.3 0 6-2.7 6-6V3zm-2 10c0 2.2-1.8 4-4 4h-4c-2.2 0-4-1.8-4-4V5h12v8z"/><path d="M12 19v2M8 21h8"/></svg></div>
@@ -467,20 +448,20 @@ textarea.fc{resize:none}
       <label style="display:flex;align-items:center;gap:6px;font-size:11px;color:#78746A;cursor:pointer">
         <input type="checkbox" id="l-remember" style="width:14px;height:14px;accent-color:#2A6348"> Remember me
       </label>
-      <span class="link-btn" onclick="showForgot()" id="lnk-forgot">Forgot password?</span>
+      <span class="link-btn" onclick="showForgot()">Forgot password?</span>
     </div>
 
     <button class="btn btn-p btn-full" id="l-btn" onclick="doLogin()">Sign In</button>
 
     <div class="divider"></div>
-    <div style="text-align:center;font-size:11px;color:#78746A" id="login-msg-new">
+    <div style="text-align:center;font-size:11px;color:#78746A">
       New user? Contact your <strong>system administrator</strong> to create your account.
     </div>
   </div>
 </div>
 
 <!-- ══ FORGOT PASSWORD ══ -->
-<div id="forgot-screen" class="auth-screen" >
+<div id="forgot-screen" class="auth-screen">
   <div class="auth-box">
     <div style="font-size:16px;font-weight:700;margin-bottom:6px">🔑 Reset Password</div>
     <p style="font-size:12px;color:#78746A;margin-bottom:20px">Enter your email — the admin will reset your password manually.</p>
@@ -492,9 +473,7 @@ textarea.fc{resize:none}
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     MAIN APP
-══════════════════════════════════ -->
+<!-- ══ MAIN APP ══ -->
 <div id="app-screen">
   <div id="sync-bar"></div>
 
@@ -530,8 +509,6 @@ textarea.fc{resize:none}
 
   <!-- APP BODY -->
   <div id="app-body">
-
-    <!-- LEFT SIDEBAR -->
     <nav id="sidebar">
       <div class="sb-header">
         <span class="sb-hosp" id="sb-hosp">RePlate</span>
@@ -539,12 +516,7 @@ textarea.fc{resize:none}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M15 18l-6-6 6-6"/></svg>
         </button>
       </div>
-
-      <div id="sidebar-nav">
-        <!-- Built dynamically by JS -->
-      </div>
-
-      <!-- User at bottom -->
+      <div id="sidebar-nav"></div>
       <div class="sb-footer" onclick="openModal('overlay-profile')">
         <div class="sb-avatar" id="sb-avatar">—</div>
         <div class="sb-user-info">
@@ -554,7 +526,6 @@ textarea.fc{resize:none}
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
     <div id="content">
       <div class="screen active" id="s-dashboard"></div>
       <div class="screen" id="s-log"></div>
@@ -562,20 +533,13 @@ textarea.fc{resize:none}
       <div class="screen" id="s-partner"></div>
       <div class="screen" id="s-admin"></div>
     </div>
+  </div>
 
-  </div><!-- end app-body -->
-
-  <!-- Mobile sidebar overlay backdrop -->
   <div id="mobile-overlay" onclick="closeMobileSidebar()"></div>
-
-  <!-- Mobile bottom nav (hidden) -->
   <nav id="bnav"></nav>
+</div>
 
-</div><!-- end app-screen -->
-
-<!-- ══ MODALS ══ -->
-
-<!-- Profile / Account -->
+<!-- MODALS -->
 <div class="overlay" id="overlay-profile">
   <div class="modal">
     <div class="modal-hd"><h3 style="font-size:16px;font-weight:700" id="m-profile-title">My Account</h3><button class="modal-close" onclick="closeModal('overlay-profile')">✕</button></div>
@@ -583,13 +547,12 @@ textarea.fc{resize:none}
   </div>
 </div>
 
-<!-- Change password -->
 <div class="overlay" id="overlay-chpw">
   <div class="modal">
-    <div class="modal-hd"><h3 style="font-size:16px;font-weight:700" id="m-chpw-title">Change Password</h3><button class="modal-close" onclick="closeModal('overlay-chpw')">✕</button></div>
-    <div class="fg"><label class="fl" id="cp-lbl-cur">Current Password</label>
+    <div class="modal-hd"><h3 style="font-size:16px;font-weight:700">Change Password</h3><button class="modal-close" onclick="closeModal('overlay-chpw')">✕</button></div>
+    <div class="fg"><label class="fl">Current Password</label>
       <div class="pw-wrap"><input class="fc" id="cp-old" type="password" placeholder="••••••••"><span class="pw-eye" onclick="togglePw('cp-old',this)">👁</span></div></div>
-    <div class="fg"><label class="fl" id="cp-lbl-new">New Password</label>
+    <div class="fg"><label class="fl">New Password</label>
       <div class="pw-wrap"><input class="fc" id="cp-new" type="password" placeholder="Min. 8 characters" oninput="checkStrength(this.value,'cp')"><span class="pw-eye" onclick="togglePw('cp-new',this)">👁</span></div>
       <div style="display:flex;gap:4px;margin-top:5px" id="cp-bars">
         <div style="flex:1;height:3px;border-radius:2px;background:#DFD9D0" id="cp-b1"></div>
@@ -598,14 +561,13 @@ textarea.fc{resize:none}
         <div style="flex:1;height:3px;border-radius:2px;background:#DFD9D0" id="cp-b4"></div>
       </div>
     </div>
-    <div class="fg"><label class="fl" id="cp-lbl-conf">Confirm New Password</label>
+    <div class="fg"><label class="fl">Confirm New Password</label>
       <div class="pw-wrap"><input class="fc" id="cp-new2" type="password" placeholder="Re-enter new password"><span class="pw-eye" onclick="togglePw('cp-new2',this)">👁</span></div></div>
     <div class="err-box" id="cp-err"></div>
-    <button class="btn btn-p btn-full" id="cp-btn" onclick="changePassword()">Update Password</button>
+    <button class="btn btn-p btn-full" onclick="changePassword()">Update Password</button>
   </div>
 </div>
 
-<!-- Pickup request -->
 <div class="overlay" id="overlay-pickup">
   <div class="modal">
     <div class="modal-hd"><h3 style="font-size:16px;font-weight:700" id="m-pickup-title">Create Pickup Request</h3><button class="modal-close" onclick="closeModal('overlay-pickup')">✕</button></div>
@@ -622,7 +584,6 @@ textarea.fc{resize:none}
   </div>
 </div>
 
-<!-- Settings modal -->
 <div class="overlay" id="overlay-settings">
   <div class="modal" style="border-radius:16px;max-width:560px;margin:auto">
     <div class="modal-hd"><h3 style="font-size:16px;font-weight:700" id="m-settings-title">⚙️ System Settings</h3><button class="modal-close" onclick="closeModal('overlay-settings')">✕</button></div>
@@ -630,7 +591,6 @@ textarea.fc{resize:none}
   </div>
 </div>
 
-<!-- Partner management modal -->
 <div class="overlay" id="overlay-partner-form">
   <div class="modal">
     <div class="modal-hd"><h3 id="pf-title" style="font-size:16px;font-weight:700">Add Partner</h3><button class="modal-close" onclick="closeModal('overlay-partner-form')">✕</button></div>
@@ -659,7 +619,6 @@ textarea.fc{resize:none}
   </div>
 </div>
 
-<!-- User management modal -->
 <div class="overlay" id="overlay-user">
   <div class="modal">
     <div class="modal-hd"><h3 id="um-title" style="font-size:16px;font-weight:700">Add User</h3><button class="modal-close" onclick="closeModal('overlay-user')">✕</button></div>
@@ -688,8 +647,8 @@ textarea.fc{resize:none}
 
 <div class="notif-panel" id="notif-panel">
   <div class="np-hd">
-    <span id="np-hd-title">🔔 Notifications</span>
-    <span style="font-size:10px;color:#78746A;cursor:pointer" id="np-hd-close" onclick="document.getElementById('notif-panel').classList.remove('show')">Close</span>
+    <span>🔔 Notifications</span>
+    <span style="font-size:10px;color:#78746A;cursor:pointer" onclick="document.getElementById('notif-panel').classList.remove('show')">Close</span>
   </div>
   <div id="notif-list"></div>
 </div>
@@ -733,26 +692,19 @@ const I18N = {
     notes: "Notes",
     sendPU: "Send Request to Partner",
     sysSettings: "System Settings",
-    // Dashboard strings
     noEntriesYet: "No entries logged yet.",
     logWaste: "＋ Log Waste",
     requestPickup: "🚛 Request Pickup",
-    // Settings modal strings
     defaultCostPerKg: "Default cost per kg",
     realTimeAlerts: "Real-time alerts",
     autoNotifyPartners: "Auto-notify partners",
-    // Profile modal strings
     profileTitle: "My Account",
-    // Sync/toast strings
     settingsSaved: "✅ Settings saved",
-    invalidCredentials: "❌ Invalid credentials",
-    // Sidebar nav section labels
+    invalidCredentials: "❌ Invalid email or password",
     navMain: "Main",
     navAdminSection: "Admin",
-    // Topbar
     refresh: "Refresh",
     notifications: "Notifications",
-    // Log Waste screen
     logWasteTitle: "Log Waste Entry",
     logStep1: "Meal Info",
     logStep2: "Weight",
@@ -778,7 +730,6 @@ const I18N = {
     submitEntry: "Submit Entry",
     entryLogged: "✅ Entry logged successfully",
     fillRequired: "Please fill all required fields",
-    // Reports screen
     reportsTitle: "Reports & Analytics",
     filterRange: "Date Range",
     filterDept: "Department",
@@ -797,7 +748,6 @@ const I18N = {
     wasteOverTime: "Waste Over Time",
     exportCSV: "Export CSV",
     noData: "No data for selected filters.",
-    // Partner screen
     partnerTitle: "Waste Partners & Pickups",
     addPartner: "Add Partner",
     pickupRequests: "Pickup Requests",
@@ -821,7 +771,6 @@ const I18N = {
     confirmed: "Confirmed",
     completed: "Completed",
     cancelled: "Cancelled",
-    // Admin screen
     adminTitle: "System Administration",
     usersTab: "Users",
     settingsTab: "Settings",
@@ -875,26 +824,19 @@ const I18N = {
     notes: "ملاحظات",
     sendPU: "إرسال الطلب للشريك",
     sysSettings: "إعدادات النظام",
-    // Dashboard strings
     noEntriesYet: "لا توجد مدخلات مسجلة بعد.",
     logWaste: "＋ تسجيل نفايات",
     requestPickup: "🚛 طلب استلام",
-    // Settings modal strings
     defaultCostPerKg: "التكلفة الافتراضية لكل كيلوغرام",
     realTimeAlerts: "تنبيهات فورية",
     autoNotifyPartners: "إشعار الشركاء تلقائياً",
-    // Profile modal strings
     profileTitle: "حسابي",
-    // Sync/toast strings
     settingsSaved: "✅ تم حفظ الإعدادات",
     invalidCredentials: "❌ بيانات الدخول غير صحيحة",
-    // Sidebar nav section labels
     navMain: "الرئيسية",
     navAdminSection: "الإدارة",
-    // Topbar
     refresh: "تحديث",
     notifications: "التنبيهات",
-    // Log Waste screen
     logWasteTitle: "تسجيل مدخل نفايات",
     logStep1: "معلومات الوجبة",
     logStep2: "الوزن",
@@ -920,7 +862,6 @@ const I18N = {
     submitEntry: "إرسال المدخل",
     entryLogged: "✅ تم تسجيل المدخل بنجاح",
     fillRequired: "يرجى ملء جميع الحقول المطلوبة",
-    // Reports screen
     reportsTitle: "التقارير والتحليلات",
     filterRange: "النطاق الزمني",
     filterDept: "القسم",
@@ -939,7 +880,6 @@ const I18N = {
     wasteOverTime: "النفايات عبر الزمن",
     exportCSV: "تصدير CSV",
     noData: "لا توجد بيانات للفلاتر المحددة.",
-    // Partner screen
     partnerTitle: "شركاء النفايات والاستلام",
     addPartner: "إضافة شريك",
     pickupRequests: "طلبات الاستلام",
@@ -963,7 +903,6 @@ const I18N = {
     confirmed: "مؤكد",
     completed: "مكتمل",
     cancelled: "ملغي",
-    // Admin screen
     adminTitle: "إدارة النظام",
     usersTab: "المستخدمون",
     settingsTab: "الإعدادات",
@@ -987,7 +926,7 @@ const I18N = {
 
 function t(key) {
   const lang = DB?.settings?.language || 'en';
-  return I18N[lang][key] || I18N['en'][key] || key;
+  return I18N[lang]?.[key] || I18N['en'][key] || key;
 }
 
 // ══════════════════════════════════════════════════════
@@ -1001,7 +940,6 @@ let _saveTimer = null;
 let DB = null;
 let currentUser = null;
 let currentScreen = '';
-let logStep = 1, logForm = {};
 let sortCol = 'date', sortDir = 'desc';
 let reportFilters = {range:'This Week',dept:'All',cat:'All'};
 let setupData = {};
@@ -1047,7 +985,6 @@ async function saveDB(db) {
   }, 1000);
 }
 
-// Simple hash
 function hashPw(pw, salt) {
   let s = pw + ':' + salt + ':rp2026';
   for (let i = 0; i < 5; i++) s = btoa(s);
@@ -1086,10 +1023,7 @@ window.onload = async function() {
   if (!DB || !DB.users) {
     showScreen('setup');
   } else {
-    // Initial Layout Direction
-    document.body.dir = t('dir');
-    document.getElementById('loading-text').textContent = t('loading');
-
+    document.body.dir = I18N[DB?.settings?.language || 'en'].dir;
     const ses = getSession();
     if (ses) {
       const u = DB.users.find(u => u.id === ses.userId && u.status === 'Active');
@@ -1117,6 +1051,208 @@ function showScreen(name) {
 }
 
 // ══════════════════════════════════════════════════════
+//  SETUP FUNCTIONS  ← THE MISSING PIECE
+// ══════════════════════════════════════════════════════
+
+function showErr(id, msg) {
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.classList.add('show');
+  el.closest('.auth-box')?.classList.add('anim-shake');
+  setTimeout(() => el.closest('.auth-box')?.classList.remove('anim-shake'), 400);
+}
+function hideErr(id) {
+  const el = document.getElementById(id);
+  el.textContent = '';
+  el.classList.remove('show');
+}
+
+function goSetupStep(step) {
+  // Hide all steps
+  document.querySelectorAll('.setup-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('setup-s' + step).classList.add('active');
+
+  // Update progress dots
+  ['sp1','sp2','sp3'].forEach((id, i) => {
+    const dot = document.getElementById(id);
+    dot.classList.remove('done');
+    if (i < step) dot.classList.add('done');
+  });
+}
+
+function setupStep1() {
+  const name  = document.getElementById('s-hosp-name').value.trim();
+  const email = document.getElementById('s-hosp-email').value.trim();
+  hideErr('s1-err');
+
+  if (!name) { showErr('s1-err', 'Hospital name is required.'); return; }
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showErr('s1-err', 'Please enter a valid contact email.'); return;
+  }
+
+  setupData.hospName  = name;
+  setupData.hospCity  = document.getElementById('s-hosp-city').value.trim();
+  setupData.hospEmail = email;
+
+  goSetupStep(2);
+}
+
+function setupStep2() {
+  const name  = document.getElementById('s-admin-name').value.trim();
+  const email = document.getElementById('s-admin-email').value.trim();
+  const pw    = document.getElementById('s-admin-pw').value;
+  const pw2   = document.getElementById('s-admin-pw2').value;
+  hideErr('s2-err');
+
+  if (!name)  { showErr('s2-err', 'Full name is required.'); return; }
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showErr('s2-err', 'Please enter a valid admin email.'); return;
+  }
+  if (pw.length < 8) { showErr('s2-err', 'Password must be at least 8 characters.'); return; }
+  if (pw !== pw2)    { showErr('s2-err', 'Passwords do not match.'); return; }
+
+  setupData.adminName  = name;
+  setupData.adminEmail = email;
+  setupData.adminPw    = pw;
+
+  // Populate review panel
+  document.getElementById('setup-review').innerHTML = `
+    <div style="font-size:12px;line-height:2">
+      <div>🏥 <strong>Hospital:</strong> ${setupData.hospName} ${setupData.hospCity ? '— '+setupData.hospCity : ''}</div>
+      <div>📧 <strong>Contact:</strong> ${setupData.hospEmail}</div>
+      <div>👤 <strong>Admin:</strong> ${setupData.adminName}</div>
+      <div>📬 <strong>Admin Email:</strong> ${setupData.adminEmail}</div>
+    </div>`;
+
+  goSetupStep(3);
+}
+
+async function finishSetup() {
+  hideErr('s3-err');
+
+  const salt   = genSalt();
+  const pwHash = hashPw(setupData.adminPw, salt);
+
+  const newDB = {
+    hospital: {
+      name:  setupData.hospName,
+      city:  setupData.hospCity,
+      email: setupData.hospEmail
+    },
+    users: [{
+      id:     'u_' + Date.now(),
+      name:   setupData.adminName,
+      email:  setupData.adminEmail,
+      role:   'Admin',
+      dept:   '',
+      status: 'Active',
+      salt,
+      pwHash
+    }],
+    entries:  [],
+    pickups:  [],
+    partners: [],
+    settings: {
+      language:        'en',
+      currency:        'SAR',
+      defaultCostPerKg: 5,
+      notifs:          true,
+      autoNotify:      false
+    }
+  };
+
+  const btn = document.querySelector('#setup-s3 .btn-p');
+  btn.textContent = '⏳ Setting up…';
+  btn.disabled = true;
+
+  await saveDB(newDB);
+  currentUser = newDB.users[0];
+  setSession(currentUser);
+  launchApp();
+}
+
+// ── Forgot password screens ──
+function showForgot() { showScreen('forgot'); }
+function showLogin()  { showScreen('login'); }
+
+function submitForgot() {
+  const email = document.getElementById('fp-email').value.trim();
+  const msgEl = document.getElementById('fp-msg');
+  if (!email) { toast('Please enter your email.'); return; }
+  msgEl.style.display = 'block';
+  msgEl.innerHTML = `<div class="alert alert-green"><span>✅</span><div>Request sent. Your administrator will reset your password and notify you.</div></div>`;
+}
+
+// ── Password strength checker ──
+function checkStrength(pw, prefix) {
+  let score = 0;
+  if (pw.length >= 8)           score++;
+  if (/[A-Z]/.test(pw))        score++;
+  if (/[0-9]/.test(pw))        score++;
+  if (/[^A-Za-z0-9]/.test(pw)) score++;
+
+  const colors = ['#DFD9D0','#B83025','#C4672F','#B07D10','#2A6348'];
+  const labels = ['','Weak','Fair','Good','Strong'];
+
+  // Determine bar IDs based on prefix
+  let bars, lblId;
+  if (prefix === 's') {
+    bars  = ['sb1','sb2','sb3','sb4'];
+    lblId = 's-strength-lbl';
+  } else {
+    bars  = [`${prefix}-b1`,`${prefix}-b2`,`${prefix}-b3`,`${prefix}-b4`];
+    lblId = null;
+  }
+
+  bars.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el) el.style.background = i < score ? colors[score] : '#DFD9D0';
+  });
+
+  if (lblId) {
+    const lbl = document.getElementById(lblId);
+    if (lbl) lbl.textContent = pw.length === 0 ? 'Enter a password' : labels[score] || 'Weak';
+  }
+}
+
+// ── Change password (in-app) ──
+function changePassword() {
+  const old  = document.getElementById('cp-old').value;
+  const nw   = document.getElementById('cp-new').value;
+  const nw2  = document.getElementById('cp-new2').value;
+  const errEl = document.getElementById('cp-err');
+
+  errEl.classList.remove('show');
+  const hash = hashPw(old, currentUser.salt);
+  if (hash !== currentUser.pwHash) {
+    errEl.textContent = 'Current password is incorrect.';
+    errEl.classList.add('show');
+    return;
+  }
+  if (nw.length < 8) {
+    errEl.textContent = 'New password must be at least 8 characters.';
+    errEl.classList.add('show');
+    return;
+  }
+  if (nw !== nw2) {
+    errEl.textContent = 'Passwords do not match.';
+    errEl.classList.add('show');
+    return;
+  }
+
+  const salt   = genSalt();
+  const pwHash = hashPw(nw, salt);
+  currentUser.salt   = salt;
+  currentUser.pwHash = pwHash;
+
+  const idx = DB.users.findIndex(u => u.id === currentUser.id);
+  if (idx !== -1) { DB.users[idx].salt = salt; DB.users[idx].pwHash = pwHash; }
+  saveDB(DB);
+  closeModal('overlay-chpw');
+  toast('✅ Password updated successfully');
+}
+
+// ══════════════════════════════════════════════════════
 //  LAUNCH APP
 // ══════════════════════════════════════════════════════
 const ROLE_CFG = {
@@ -1140,17 +1276,13 @@ function launchApp() {
   const cfg = ROLE_CFG[currentUser.role];
   document.body.dir = t('dir');
 
-  // Top Bar Strings
   document.getElementById('tb-role').textContent = cfg.badge;
   document.getElementById('tb-avatar').textContent = initials(currentUser);
-  
-  // Sidebar Strings
   document.getElementById('sb-avatar').textContent = initials(currentUser);
   document.getElementById('sb-name').textContent = currentUser.name;
   document.getElementById('sb-role').textContent = currentUser.role + (currentUser.dept?' · '+currentUser.dept:'');
   document.getElementById('sb-hosp').textContent = DB.hospital?.name || 'RePlate';
 
-  // Build sidebar nav
   const sidebarNav = document.getElementById('sidebar-nav');
   const mainNav = ['dashboard','log','reports','partner'].filter(id=>cfg.nav.includes(id));
   const adminNav = cfg.nav.filter(id=>!mainNav.includes(id));
@@ -1213,26 +1345,24 @@ function renderScreen(n, el) {
 // ══════════════════════════════════════════════════════
 function renderDashboard(el) {
   const todayStr = today(0);
-  const todayE = DB.entries.filter(e => e.date === todayStr);
+  const todayE = (DB.entries || []).filter(e => e.date === todayStr);
   const todayKg = todayE.reduce((s, e) => s + Number(e.kg), 0);
-  const pending = DB.pickups.filter(p => p.status === 'Pending').length;
+  const pending = (DB.pickups || []).filter(p => p.status === 'Pending').length;
 
   el.innerHTML=`
     <div style="font-size:19px;font-weight:700;letter-spacing:-.4px;margin-bottom:2px">
       ${t('welcome')}, ${currentUser.name} 👋
     </div>
     <div style="font-size:11px;color:#78746A;margin-bottom:16px">${DB.hospital?.name||''}</div>
-    
     <div class="stat-row">
       <div class="sbox"><div class="n c-orange">${todayKg}</div><div class="l">${t('kgToday')}</div></div>
       <div class="sbox"><div class="n c-green">${todayE.length}</div><div class="l">${t('entToday')}</div></div>
       <div class="sbox"><div class="n c-blue">${pending}</div><div class="l">${t('pendPU')}</div></div>
     </div>`;
 
-  // Recent Entries Card
   const rc = makeCard('');
   rc.innerHTML = `<div class="card-hd">${t('recent')}</div>`;
-  const recent = [...DB.entries].sort((a,b) => b.id - a.id).slice(0, 4);
+  const recent = [...(DB.entries||[])].sort((a,b) => b.id - a.id).slice(0, 4);
   if(!recent.length) {
     rc.innerHTML += `<div style="text-align:center;padding:20px;font-size:11px;color:#78746A">${t('noEntriesYet')}</div>`;
   } else {
@@ -1263,7 +1393,6 @@ function buildSettingsModal() {
   const costPerKg = DB.settings?.defaultCostPerKg || 5;
   const hosp = DB.hospital || {};
   
-  // Modal Labels
   document.getElementById('m-settings-title').textContent = `⚙️ ${t('sysSettings')}`;
 
   content.innerHTML = `
@@ -1273,7 +1402,6 @@ function buildSettingsModal() {
           <span style="color:#78746A">${hosp.name || '—'}</span><strong>${hosp.city || '—'}</strong>
         </div>
     </div>
-
     <div class="fc-2" style="margin-bottom:16px">
       <div class="fg" style="margin-bottom:0"><label class="fl">${t('lang')}</label>
         <select class="fc" id="sm-lang">
@@ -1285,10 +1413,8 @@ function buildSettingsModal() {
           ${['SAR','USD','EUR','AED'].map(c=>`<option ${c===currency?'selected':''}>${c}</option>`).join('')}
         </select></div>
     </div>
-
     <div class="fg"><label class="fl">${t('defaultCostPerKg')}</label>
       <input class="fc" id="sm-cost" type="number" value="${costPerKg}" step="0.5"></div>
-
     <div style="font-weight:600;font-size:13px;margin-bottom:10px">🔔 ${t('notifs')}</div>
     ${[['notifs', t('realTimeAlerts')],['autoNotify', t('autoNotifyPartners')]].map(([k,l])=>`
       <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F0EDE8">
@@ -1297,7 +1423,6 @@ function buildSettingsModal() {
           <div class="sw-thumb" style="left:${DB.settings[k]?'19px':'2px'}"></div>
         </button>
       </div>`).join('')}
-
     <button class="btn btn-p btn-full" style="margin-top:18px" onclick="saveSettingsModal()">${t('saveSettings')}</button>`;
 }
 
@@ -1310,19 +1435,15 @@ function saveSettingsModal() {
   DB.settings.language = document.getElementById('sm-lang').value;
   DB.settings.currency = document.getElementById('sm-currency').value;
   DB.settings.defaultCostPerKg = Number(document.getElementById('sm-cost').value);
-  
   saveDB(DB);
   closeModal('overlay-settings');
   toast(t('settingsSaved'));
-  
-  // Re-launch app to apply Language
   launchApp();
 }
 
 // ══════════════════════════════════════════════════════
-//  REMAINING ORIGINAL LOGIC
+//  UTILITIES
 // ══════════════════════════════════════════════════════
-
 function today(offset=0) { const d=new Date(); d.setDate(d.getDate()-offset); return d.toISOString().slice(0,10); }
 function nowTime() { return new Date().toTimeString().slice(0,5); }
 function makeCard(inner) { const d=document.createElement('div'); d.className='card'; d.innerHTML=inner||''; return d; }
@@ -1356,9 +1477,28 @@ function buildPickupModal() {
   document.getElementById('pu-lbl-type').textContent = t('wasteType');
   document.getElementById('pu-lbl-notes').textContent = t('notes');
   document.getElementById('pu-btn').textContent = t('sendPU');
-  
   const sel = document.getElementById('pu-partner');
   sel.innerHTML = (DB?.partners || []).map(p => `<option>${p.name}</option>`).join('') || '<option>No partners</option>';
+}
+
+function submitPickup() {
+  const kg = document.getElementById('pu-kg').value;
+  if (!kg || kg <= 0) { toast(t('fillRequired')); return; }
+  if (!DB.pickups) DB.pickups = [];
+  DB.pickups.push({
+    id:      Date.now(),
+    partner: document.getElementById('pu-partner').value,
+    kg:      Number(kg),
+    date:    document.getElementById('pu-date').value || today(0),
+    type:    document.getElementById('pu-type').value,
+    notes:   document.getElementById('pu-notes').value,
+    status:  'Pending',
+    by:      currentUser.name
+  });
+  saveDB(DB);
+  closeModal('overlay-pickup');
+  toast('✅ Pickup request submitted');
+  if (currentScreen === 'partner') navigate('partner');
 }
 
 function logout() {
@@ -1370,14 +1510,34 @@ function logout() {
 function doLogin() {
   const email = document.getElementById('l-email').value.trim();
   const pw = document.getElementById('l-pw').value;
+  const errEl = document.getElementById('l-err');
+  errEl.classList.remove('show');
+
   const user = authenticate(email, pw);
   if (user) {
     currentUser = user;
     setSession(user);
     launchApp();
   } else {
-    toast(t('invalidCredentials'));
+    errEl.textContent = t('invalidCredentials');
+    errEl.classList.add('show');
   }
+}
+
+async function refreshFromCloud() {
+  const btn = document.getElementById('refresh-btn');
+  btn.style.opacity = '0.4';
+  DB = await loadFromCloud();
+  btn.style.opacity = '1';
+  navigate(currentScreen);
+}
+
+function openNotifPanel() {
+  const panel = document.getElementById('notif-panel');
+  panel.classList.toggle('show');
+  document.getElementById('notif-list').innerHTML = `
+    <div class="np-item"><div class="np-dot" style="background:#2A6348"></div>
+    <div><div class="np-text">System is running normally.</div><div class="np-time">Just now</div></div></div>`;
 }
 
 function showSyncBar(msg,warn=false) {
@@ -1392,7 +1552,17 @@ function toast(msg) {
 
 function toggleSidebar() {
   const sb = document.getElementById('sidebar');
-  sb.classList.toggle('collapsed');
+  if(window.innerWidth <= 768) {
+    sb.classList.toggle('mobile-open');
+    document.getElementById('mobile-overlay').classList.toggle('show', sb.classList.contains('mobile-open'));
+  } else {
+    sb.classList.toggle('collapsed');
+  }
+}
+
+function closeMobileSidebar() {
+  document.getElementById('sidebar').classList.remove('mobile-open');
+  document.getElementById('mobile-overlay').classList.remove('show');
 }
 
 function togglePw(id, eye) {
@@ -1407,7 +1577,6 @@ function togglePw(id, eye) {
 function renderLog(el) {
   el.innerHTML = `
     <div style="font-size:19px;font-weight:700;letter-spacing:-.4px;margin-bottom:16px">${t('logWasteTitle')}</div>
-
     <div class="steps" style="margin-bottom:24px">
       <div class="step-dot active" id="sd1">1</div>
       <div class="step-line pending" id="sl1"></div>
@@ -1415,66 +1584,48 @@ function renderLog(el) {
       <div class="step-line pending" id="sl2"></div>
       <div class="step-dot pending" id="sd3">3</div>
     </div>
-
-    <!-- Step 1 -->
     <div id="log-s1">
       <div class="card">
         <div class="card-hd">${t('logStep1')}</div>
         <div class="fc-2">
-          <div class="fg">
-            <label class="fl">${t('mealType')} <span style="color:#B83025">*</span></label>
+          <div class="fg"><label class="fl">${t('mealType')} <span style="color:#B83025">*</span></label>
             <select class="fc" id="lf-meal">
               <option value="Breakfast">${t('breakfast')}</option>
               <option value="Lunch">${t('lunch')}</option>
               <option value="Dinner">${t('dinner')}</option>
               <option value="Snack">${t('snack')}</option>
               <option value="Other">${t('other')}</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label class="fl">${t('department')} <span style="color:#B83025">*</span></label>
-            <input class="fc" id="lf-dept" placeholder="e.g. Kitchen A">
-          </div>
+            </select></div>
+          <div class="fg"><label class="fl">${t('department')} <span style="color:#B83025">*</span></label>
+            <input class="fc" id="lf-dept" placeholder="e.g. Kitchen A"></div>
         </div>
         <div class="fc-2">
-          <div class="fg">
-            <label class="fl">${t('category')} <span style="color:#B83025">*</span></label>
+          <div class="fg"><label class="fl">${t('category')} <span style="color:#B83025">*</span></label>
             <select class="fc" id="lf-cat">
               <option value="Plate Waste">${t('catPlate')}</option>
               <option value="Prep Waste">${t('catPrep')}</option>
               <option value="Expired Food">${t('catExpired')}</option>
               <option value="Other">${t('catOther')}</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label class="fl">${t('date')}</label>
-            <input class="fc" id="lf-date" type="date" value="${today(0)}">
-          </div>
+            </select></div>
+          <div class="fg"><label class="fl">${t('date')}</label>
+            <input class="fc" id="lf-date" type="date" value="${today(0)}"></div>
         </div>
-        <div class="fg">
-          <label class="fl">${t('notes')}</label>
-          <input class="fc" id="lf-notes" type="text" placeholder="e.g. Leftover from ward B">
-        </div>
+        <div class="fg"><label class="fl">${t('notes')}</label>
+          <input class="fc" id="lf-notes" type="text" placeholder="e.g. Leftover from ward B"></div>
         <button class="btn btn-p" onclick="logNext(1)">${t('next')}</button>
       </div>
     </div>
-
-    <!-- Step 2 -->
     <div id="log-s2" style="display:none">
       <div class="card">
         <div class="card-hd">${t('logStep2')}</div>
-        <div class="fg">
-          <label class="fl">${t('weightKg')} <span style="color:#B83025">*</span></label>
-          <input class="fc" id="lf-kg" type="number" placeholder="${t('weightPlaceholder')}" min="0.1" step="0.1" style="font-size:22px;font-weight:700;text-align:center;padding:16px">
-        </div>
+        <div class="fg"><label class="fl">${t('weightKg')} <span style="color:#B83025">*</span></label>
+          <input class="fc" id="lf-kg" type="number" placeholder="${t('weightPlaceholder')}" min="0.1" step="0.1" style="font-size:22px;font-weight:700;text-align:center;padding:16px"></div>
         <div class="btn-2col">
           <button class="btn btn-o" onclick="logBack(2)">${t('back')}</button>
           <button class="btn btn-p" onclick="logNext(2)">${t('next')}</button>
         </div>
       </div>
     </div>
-
-    <!-- Step 3 -->
     <div id="log-s3" style="display:none">
       <div class="card">
         <div class="card-hd">${t('logStep3')}</div>
@@ -1506,9 +1657,9 @@ function logNext(step) {
     document.getElementById('sd3').classList.add('active');
     const meal = document.getElementById('lf-meal').value;
     const dept = document.getElementById('lf-dept').value;
-    const cat = document.getElementById('lf-cat').value;
+    const cat  = document.getElementById('lf-cat').value;
     const date = document.getElementById('lf-date').value;
-    const notes = document.getElementById('lf-notes').value;
+    const notes= document.getElementById('lf-notes').value;
     document.getElementById('log-review').innerHTML =
       `<div>🍽️ <strong>${t('mealType')}:</strong> ${meal}</div>
        <div>🏥 <strong>${t('department')}:</strong> ${dept}</div>
@@ -1557,106 +1708,85 @@ function submitLogEntry() {
 //  REPORTS SCREEN
 // ══════════════════════════════════════════════════════
 function renderReports(el) {
-  const currency = DB.settings?.currency || 'SAR';
-  const costPerKg = DB.settings?.defaultCostPerKg || 5;
   const entries = DB.entries || [];
-
-  // Apply filters
   const rfRange = reportFilters.range;
-  const rfDept = reportFilters.dept;
-  const rfCat = reportFilters.cat;
+  const rfDept  = reportFilters.dept;
+  const rfCat   = reportFilters.cat;
 
-  const cutoff = rfRange === t('thisWeek') || rfRange === 'This Week' ? today(7)
-               : rfRange === t('thisMonth') || rfRange === 'This Month' ? today(30)
+  const cutoff = (rfRange === t('thisWeek')  || rfRange === 'This Week')  ? today(7)
+               : (rfRange === t('thisMonth') || rfRange === 'This Month') ? today(30)
                : today(30);
 
   const filtered = entries.filter(e => {
-    const inRange = e.date >= cutoff;
-    const inDept = rfDept === 'All' || e.dept === rfDept;
-    const inCat  = rfCat  === 'All' || e.category === rfCat;
-    return inRange && inDept && inCat;
+    return e.date >= cutoff &&
+           (rfDept === 'All' || e.dept === rfDept) &&
+           (rfCat  === 'All' || e.category === rfCat);
   });
 
-  const totalKg = filtered.reduce((s, e) => s + Number(e.kg), 0).toFixed(1);
+  const totalKg  = filtered.reduce((s, e) => s + Number(e.kg), 0).toFixed(1);
   const totalEnt = filtered.length;
-  const days = rfRange === t('thisWeek') || rfRange === 'This Week' ? 7 : 30;
-  const avg = totalEnt ? (totalKg / days).toFixed(1) : 0;
+  const days = (rfRange === t('thisWeek') || rfRange === 'This Week') ? 7 : 30;
+  const avg  = totalEnt ? (totalKg / days).toFixed(1) : 0;
 
-  // Top category
   const catMap = {};
   filtered.forEach(e => { catMap[e.category] = (catMap[e.category] || 0) + Number(e.kg); });
   const topCat = Object.entries(catMap).sort((a,b)=>b[1]-a[1])[0]?.[0] || '—';
 
-  // Dept breakdown
   const deptMap = {};
   filtered.forEach(e => { deptMap[e.dept] = (deptMap[e.dept] || 0) + Number(e.kg); });
   const deptRows = Object.entries(deptMap).sort((a,b)=>b[1]-a[1]);
 
-  // Unique depts and cats for filters
   const allDepts = [...new Set(entries.map(e=>e.dept))].filter(Boolean);
   const allCats  = [...new Set(entries.map(e=>e.category))].filter(Boolean);
 
   el.innerHTML = `
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:gap">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px">
       <div style="font-size:19px;font-weight:700;letter-spacing:-.4px">${t('reportsTitle')}</div>
       <button class="btn btn-o btn-sm" onclick="exportCSV()">⬇ ${t('exportCSV')}</button>
     </div>
-
     <div class="card" style="margin-bottom:14px">
       <div class="card-hd">${t('filterRange')}</div>
       <div class="fc-3">
-        <div class="fg" style="margin-bottom:0">
-          <label class="fl">${t('filterRange')}</label>
+        <div class="fg" style="margin-bottom:0"><label class="fl">${t('filterRange')}</label>
           <select class="fc" onchange="reportFilters.range=this.value;navigate('reports')">
             ${[t('thisWeek'),t('thisMonth'),t('last30')].map(r=>`<option ${reportFilters.range===r||reportFilters.range==='This Week'&&r===t('thisWeek')?'selected':''}>${r}</option>`).join('')}
-          </select>
-        </div>
-        <div class="fg" style="margin-bottom:0">
-          <label class="fl">${t('filterDept')}</label>
+          </select></div>
+        <div class="fg" style="margin-bottom:0"><label class="fl">${t('filterDept')}</label>
           <select class="fc" onchange="reportFilters.dept=this.value;navigate('reports')">
             <option value="All">${t('allDepts')}</option>
             ${allDepts.map(d=>`<option ${reportFilters.dept===d?'selected':''}>${d}</option>`).join('')}
-          </select>
-        </div>
-        <div class="fg" style="margin-bottom:0">
-          <label class="fl">${t('filterCat')}</label>
+          </select></div>
+        <div class="fg" style="margin-bottom:0"><label class="fl">${t('filterCat')}</label>
           <select class="fc" onchange="reportFilters.cat=this.value;navigate('reports')">
             <option value="All">${t('allCats')}</option>
             ${allCats.map(c=>`<option ${reportFilters.cat===c?'selected':''}>${c}</option>`).join('')}
-          </select>
-        </div>
+          </select></div>
       </div>
     </div>
-
     <div class="stat-row-4" style="margin-bottom:14px">
       <div class="sbox"><div class="n c-orange">${totalKg}</div><div class="l">${t('totalWaste')}</div></div>
       <div class="sbox"><div class="n c-green">${totalEnt}</div><div class="l">${t('totalEntries')}</div></div>
       <div class="sbox"><div class="n c-blue">${avg}</div><div class="l">${t('avgPerDay')}</div></div>
       <div class="sbox"><div class="n c-muted" style="font-size:13px">${topCat}</div><div class="l">${t('topCategory')}</div></div>
     </div>
-
     <div class="grid-2">
       <div class="card">
         <div class="card-hd">${t('wasteByCategory')}</div>
         ${!filtered.length
           ? `<div style="text-align:center;padding:20px;font-size:11px;color:#78746A">${t('noData')}</div>`
           : Object.entries(catMap).sort((a,b)=>b[1]-a[1]).map(([cat,kg])=>`
-            <div class="li">
-              <div class="li-l"><div class="li-ic">📦</div>
-              <div><div class="li-title">${cat}</div></div></div>
-              <strong>${Number(kg).toFixed(1)} kg</strong>
-            </div>`).join('')}
+            <div class="li"><div class="li-l"><div class="li-ic">📦</div>
+            <div><div class="li-title">${cat}</div></div></div>
+            <strong>${Number(kg).toFixed(1)} kg</strong></div>`).join('')}
       </div>
       <div class="card">
         <div class="card-hd">${t('wasteByDept')}</div>
         ${!deptRows.length
           ? `<div style="text-align:center;padding:20px;font-size:11px;color:#78746A">${t('noData')}</div>`
           : deptRows.map(([dept,kg])=>`
-            <div class="li">
-              <div class="li-l"><div class="li-ic">🏥</div>
-              <div><div class="li-title">${dept}</div></div></div>
-              <strong>${Number(kg).toFixed(1)} kg</strong>
-            </div>`).join('')}
+            <div class="li"><div class="li-l"><div class="li-ic">🏥</div>
+            <div><div class="li-title">${dept}</div></div></div>
+            <strong>${Number(kg).toFixed(1)} kg</strong></div>`).join('')}
       </div>
     </div>`;
 }
@@ -1692,7 +1822,6 @@ function renderPartner(el) {
 
   el.innerHTML = `
     <div style="font-size:19px;font-weight:700;letter-spacing:-.4px;margin-bottom:16px">${t('partnerTitle')}</div>
-
     <div class="card" style="margin-bottom:14px">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
         <div class="card-hd" style="margin-bottom:0">${t('partner')}</div>
@@ -1702,19 +1831,13 @@ function renderPartner(el) {
         ? `<div style="text-align:center;padding:20px;font-size:11px;color:#78746A">${t('noPartners')}</div>`
         : partners.map(p=>`
           <div class="li">
-            <div class="li-l">
-              <div class="li-ic">🚛</div>
-              <div>
-                <div class="li-title">${p.name}</div>
-                <div class="li-sub">${p.contact||''} ${p.phone ? '· '+p.phone : ''} ${p.city ? '· '+p.city : ''}</div>
-              </div>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px">
-              <span class="tag ${p.status==='Active'?'tag-green':'tag-gray'}">${p.status==='Active'?t('active'):t('inactive')}</span>
-            </div>
+            <div class="li-l"><div class="li-ic">🚛</div>
+              <div><div class="li-title">${p.name}</div>
+              <div class="li-sub">${p.contact||''} ${p.phone ? '· '+p.phone : ''} ${p.city ? '· '+p.city : ''}</div>
+            </div></div>
+            <span class="tag ${p.status==='Active'?'tag-green':'tag-gray'}">${p.status==='Active'?t('active'):t('inactive')}</span>
           </div>`).join('')}
     </div>
-
     <div class="card">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
         <div class="card-hd" style="margin-bottom:0">${t('pickupRequests')}</div>
@@ -1725,25 +1848,61 @@ function renderPartner(el) {
         : `<div style="overflow-x:auto">
             <table class="dt" style="min-width:460px">
               <thead><tr>
-                <th>${t('pickupDate')}</th>
-                <th>${t('pickupPartner')}</th>
-                <th>${t('pickupKg')}</th>
-                <th>${t('wasteType')}</th>
-                <th>${t('pickupStatus')}</th>
+                <th>${t('pickupDate')}</th><th>${t('pickupPartner')}</th>
+                <th>${t('pickupKg')}</th><th>${t('wasteType')}</th><th>${t('pickupStatus')}</th>
               </tr></thead>
               <tbody>
                 ${[...pickups].sort((a,b)=>b.id-a.id).map(p=>`
                   <tr>
-                    <td>${p.date||'—'}</td>
-                    <td>${p.partner||'—'}</td>
-                    <td>${p.kg||'—'}</td>
-                    <td>${p.type||'—'}</td>
+                    <td>${p.date||'—'}</td><td>${p.partner||'—'}</td>
+                    <td>${p.kg||'—'}</td><td>${p.type||'—'}</td>
                     <td>${statusTag(p.status)}</td>
                   </tr>`).join('')}
               </tbody>
-            </table>
-           </div>`}
+            </table></div>`}
     </div>`;
+}
+
+function savePartner() {
+  const name    = document.getElementById('pf-name').value.trim();
+  const contact = document.getElementById('pf-contact').value.trim();
+  const phone   = document.getElementById('pf-phone').value.trim();
+  const errEl   = document.getElementById('pf-err');
+  errEl.classList.remove('show');
+
+  if (!name)    { errEl.textContent='Company name is required.'; errEl.classList.add('show'); return; }
+  if (!contact) { errEl.textContent='Contact person is required.'; errEl.classList.add('show'); return; }
+  if (!phone)   { errEl.textContent='Phone is required.'; errEl.classList.add('show'); return; }
+
+  if (!DB.partners) DB.partners = [];
+  const idVal = document.getElementById('pf-id').value;
+  if (idVal) {
+    const idx = DB.partners.findIndex(p=>p.id===idVal);
+    if (idx !== -1) DB.partners[idx] = {...DB.partners[idx], name, contact, phone,
+      email: document.getElementById('pf-email').value,
+      city:  document.getElementById('pf-city').value,
+      address: document.getElementById('pf-address').value,
+      cr:    document.getElementById('pf-cr').value,
+      iban:  document.getElementById('pf-iban').value,
+      types: document.getElementById('pf-types').value,
+      status: document.getElementById('pf-status').value
+    };
+  } else {
+    DB.partners.push({
+      id: 'p_'+Date.now(), name, contact, phone,
+      email: document.getElementById('pf-email').value,
+      city:  document.getElementById('pf-city').value,
+      address: document.getElementById('pf-address').value,
+      cr:    document.getElementById('pf-cr').value,
+      iban:  document.getElementById('pf-iban').value,
+      types: document.getElementById('pf-types').value,
+      status: document.getElementById('pf-status').value || 'Active'
+    });
+  }
+  saveDB(DB);
+  closeModal('overlay-partner-form');
+  toast('✅ Partner saved');
+  if (currentScreen === 'partner') navigate('partner');
 }
 
 // ══════════════════════════════════════════════════════
@@ -1759,7 +1918,6 @@ function renderAdmin(el) {
 
   el.innerHTML = `
     <div style="font-size:19px;font-weight:700;letter-spacing:-.4px;margin-bottom:16px">${t('adminTitle')}</div>
-
     <div class="card">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
         <div class="card-hd" style="margin-bottom:0">${t('usersTab')}</div>
@@ -1770,12 +1928,9 @@ function renderAdmin(el) {
         : `<div style="overflow-x:auto">
             <table class="dt" style="min-width:520px">
               <thead><tr>
-                <th>${t('userName')}</th>
-                <th>${t('userEmail')}</th>
-                <th>${t('userRole')}</th>
-                <th>${t('userDept')}</th>
-                <th>${t('userStatus')}</th>
-                <th></th>
+                <th>${t('userName')}</th><th>${t('userEmail')}</th>
+                <th>${t('userRole')}</th><th>${t('userDept')}</th>
+                <th>${t('userStatus')}</th><th></th>
               </tr></thead>
               <tbody>
                 ${users.map(u=>`
@@ -1792,8 +1947,7 @@ function renderAdmin(el) {
                     </td>
                   </tr>`).join('')}
               </tbody>
-            </table>
-           </div>`}
+            </table></div>`}
     </div>`;
 }
 
@@ -1805,6 +1959,38 @@ function toggleUserStatus(uid) {
   navigate('admin');
 }
 
+function saveUser() {
+  const name  = document.getElementById('um-name').value.trim();
+  const email = document.getElementById('um-email').value.trim();
+  const pw    = document.getElementById('um-pw').value;
+  const role  = document.getElementById('um-role').value;
+  const errEl = document.getElementById('um-err');
+  errEl.classList.remove('show');
+
+  if (!name)  { errEl.textContent='Name is required.'; errEl.classList.add('show'); return; }
+  if (!email) { errEl.textContent='Email is required.'; errEl.classList.add('show'); return; }
+  if (!pw || pw.length < 8) { errEl.textContent='Password must be at least 8 characters.'; errEl.classList.add('show'); return; }
+
+  if (DB.users.find(u => u.email.toLowerCase() === email.toLowerCase())) {
+    errEl.textContent='A user with this email already exists.'; errEl.classList.add('show'); return;
+  }
+
+  const salt   = genSalt();
+  const pwHash = hashPw(pw, salt);
+
+  if (!DB.users) DB.users = [];
+  DB.users.push({
+    id:     'u_' + Date.now(),
+    name, email, role, salt, pwHash,
+    dept:   document.getElementById('um-dept').value.trim(),
+    status: document.getElementById('um-status').value
+  });
+
+  saveDB(DB);
+  closeModal('overlay-user');
+  toast('✅ User added');
+  navigate('admin');
+}
 </script>
 </body>
 </html>
